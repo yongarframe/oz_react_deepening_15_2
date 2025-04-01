@@ -18,7 +18,7 @@ const typeToKorean = (type) => {
 };
 
 const Boards = ({ type }) => {
-  const { data } = useBoardStore();
+  const data = [];
   const filteredData = data.filter((item) => item.type === type);
   const [item, setItem] = useState(null);
   const [isOpen, setIsOpen] = useState(false);

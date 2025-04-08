@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import BoardDetailModal from './BoardDetailModal';
-import { useBoardStore } from '../store';
 import BoardConfirmModal from './BoardConfirmModal';
 import BoardEditModal from './BoardEditModal';
 

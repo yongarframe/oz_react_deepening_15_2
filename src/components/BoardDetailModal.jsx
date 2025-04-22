@@ -15,7 +15,9 @@ const BoardDetailModal = ({ item, onClose, onConfirm, onEdit }) => {
           </button>
           <div className="flex gap-4 items-center">
             <button
-              onClick={() => onConfirm(item.id)}
+              onClick={() => {
+                onConfirm(item.id);
+              }}
               className="cursor-pointer bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-sm"
             >
               삭제

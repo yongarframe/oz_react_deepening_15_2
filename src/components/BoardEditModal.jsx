@@ -1,7 +1,10 @@
 //1. useBoardStore를 선언하여 zustand 스토어를 불러옵니다.
 //2. updateBoard 함수를 불러와 보드를 업데이트 합니다.
 
+import useDataStore from '../store';
+
 const BoardEditModal = ({ item, onClose }) => {
+  const { updateData } = useDataStore();
   const handleForm = (e) => {
     e.preventDefault();
 
@@ -13,6 +16,7 @@ const BoardEditModal = ({ item, onClose }) => {
       desc: formData.get('desc'),
       created_at: new Date().toISOString().split('T')[0],
     };
+    updateData(item.id, editTask);
     onClose();
   };
 
